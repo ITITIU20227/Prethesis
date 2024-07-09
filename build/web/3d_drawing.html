@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>3D Drawing</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script3d.js" defer></script>
+  </head>
+  
+  <body>
+      <div class="container">
+      <section class="tools-board">
+        <div class="row">
+          <label class="title">3D Shapes</label>
+          <ul class="options">
+            <li class="option tool" id="cube">
+              <img src="icons/cube.svg" alt="">
+              <span>Cube</span>
+            </li>
+            <li class="option tool" id="cone">
+              <img src="icons/cone.svg" alt="">
+              <span>Cone</span>
+            </li>
+            <li class="option tool" id="sphere">
+              <img src="icons/sphere.svg" alt="">
+              <span>Sphere</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="row">
+          <label class="title">Options</label>
+          <ul class="options">
+            <li class="option">
+              <input type="checkbox" id="move">
+              <label for="move">Move</label>
+            </li> 
+              
+            <li class="option">
+              <input type="checkbox" id="show-axis">
+              <label for="show-axis">Show axis</label>
+            </li>
+          
+            <li class="option">
+              <img src="icons/zoom.svg" alt="">
+              <label for="size-slider">Zoom</label>
+              <span></span>
+              <input type="range" id="size-slider" min="1" max="20" value="1">
+            </li>
+          </ul>
+        </div>
+        
+        <div class="row colors">
+          <label class="title">Colors</label>
+          <ul class="options">
+            <li class="option selected">
+              <input type="color" id="color-picker" />
+            </li>
+          </ul>
+        </div>
+          
+        <div class="row buttons">
+        <button class="switch-to-3d" id="toggleBtn">Switch to 2D Drawing</button>
+        <script>
+          document.getElementById('toggleBtn').addEventListener('click', () => {
+            window.location.href = '2d_drawing.html';
+          });
+        </script>
+        <button id="clear-canvas" class="clear-canvas">Clear Canvas</button>
+        <button id="save-img" class="save-img">Save As Image</button>
+        </div> 
+      </section>
+      
+      <section class="drawing-board">
+        <canvas></canvas>
+      </section>
+          
+      </div>
+  </body>
