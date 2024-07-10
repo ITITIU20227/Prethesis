@@ -26,11 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const xAxisColor = '#FF0000'; // Red
     const yAxisColor = '#00FF00'; // Green
     const zAxisColor = '#0000FF'; // Blue
-
     
-
     cubeButton.addEventListener('click', () => {
-        const length = prompt("Enter the length of the cube:");
+        const length = prompt("Enter the side length of the cube:");
         if (length) {
             shape = {
                 type: 'cube',
